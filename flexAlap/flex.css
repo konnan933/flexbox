@@ -1,0 +1,88 @@
+header, footer, article, main, aside, section, nav{
+    border:1px solid black;
+    padding: 10px;
+}
+article header{
+    background-color: red;
+}
+article{
+    background-color: gray;
+    color:white;
+}
+section{
+    /*szülő*/
+    display: flex;
+   /* flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;*/
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+section article{
+    /*gyerek*/
+    /*flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;*/
+    flex: 1 1 200px;
+}
+section article:nth-child(1){
+    order: 5;
+}
+section article:nth-child(2){
+    order: 6;
+}
+section article:nth-child(3){
+    order: 4;
+}
+section article:nth-child(4){
+    order: 3;
+}
+section article:nth-child(5){
+    order: 2;
+}
+section article:nth-child(6){
+    order: 1;
+}
+
+nav a{
+    display: inline-block;
+    color: red;
+    padding: 5px;
+    text-decoration: none;
+    border-left: 1px solid gray;
+}
+#listaval{
+    display: flex;
+    justify-content: space-between;
+}
+#listaval ul{
+    padding:0;
+    list-style-type: none;
+}
+#listaval #menu{
+    display: flex;
+}
+#divekkel{
+    display: flex;
+    justify-content: space-between;
+}
+#home{
+    background-color: red;
+}
+#home a{
+    color: white;
+}
+
+@media screen and (max-width: 700px){
+    section{
+        
+        flex-direction: column;
+    }
+}
+
+
+
+
+
